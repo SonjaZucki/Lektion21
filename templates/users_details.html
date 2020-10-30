@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Profile of {{ user.name }}{% endblock title %}
+
+{% block content %}
+<h3>{{{ user.name }}</h3>
+
+<p><strong>Email:</strong> {{ user.email }}</p>
+
+{% if user.deleted %}
+<p style="color: red;">This user has been deleted!</p>
+{% endif %}
+
+{% endblock content %}
